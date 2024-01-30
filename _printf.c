@@ -36,8 +36,6 @@ int _printf(const char *format, ...)
 	int char_printed = 0;
 	va_list arg_list;
 
-	if (format == NULL)
-		return (-1);
 	va_start(arg_list, format);
 
 	while (*format)
