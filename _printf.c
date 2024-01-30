@@ -16,8 +16,7 @@ int print_char(char c)
  *  @c: the string to be printed
  *  Return: the number of string printed
  */
-if (format == NULL)
-	return (-1);
+
 int print_string(char *c)
 {
 	int len = 0;
@@ -38,7 +37,8 @@ int _printf(const char *format, ...)
 	va_list arg_list;
 
 	va_start(arg_list, format);
-
+	if (format == NULL)
+		return (-1);
 	while (*format)
 	{
 		if (*format != '%')
