@@ -52,7 +52,6 @@ int _printf(const char *format, ...)
 			format++;
 			if (*format == '\0')
 				break;
-
 			if (*format == '%')
 			{
 				write(1, format, 1);
@@ -66,13 +65,12 @@ int _printf(const char *format, ...)
 			{
 				char_printed += print_string(va_arg(arg_list, char *));
 			}
-			else if ((format [-1] == '%') && ((format [-2] == '%') || ((format [-1] != '%'))))
+			else if ((format[-1] == '%') &&
+					((format[-2] == '%') || ((format[-1] != '%'))))
 				write(1, format, 1);
-
 		}
 		format++;
 	}
 	va_end(arg_list);
-
 	return (char_printed);
 }
