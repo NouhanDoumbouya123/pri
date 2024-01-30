@@ -66,6 +66,8 @@ int _printf(const char *format, ...)
 			{
 				char_printed += print_string(va_arg(arg_list, char *));
 			}
+			else if ((format [-1] == '%') && ((format [-2] == '%') || ((format [-1] != '%'))))
+				write(1, format, 1);
 
 		}
 		format++;
