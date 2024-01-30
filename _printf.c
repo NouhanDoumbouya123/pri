@@ -16,7 +16,8 @@ int print_char(char c)
  *  @c: the string to be printed
  *  Return: the number of string printed
  */
-
+if (format == NULL)
+	return (-1);
 int print_string(char *c)
 {
 	int len = 0;
